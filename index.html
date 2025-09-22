@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kabayan Pride Technical Services - Your Trusted Filipino Technical Partner in UAE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 20px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            background: linear-gradient(45deg, #fbbf24, #f59e0b);
+            padding: 8px;
+            border-radius: 8px;
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #fbbf24;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 140px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200"><polygon fill="rgba(255,255,255,0.1)" points="0,100 300,150 600,80 1000,130 1000,200 0,200"/></svg>') bottom;
+            background-size: cover;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #fbbf24;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fbbf24;
+            margin-top: 20px;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #dc2626, #ef4444);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(220, 38, 38, 0.4);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #1e3a8a;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-left: 5px solid #3b82f6;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #3b82f6;
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #1e3a8a;
+        }
+
+        .service-card p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            color: #1e3a8a;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #64748b;
+        }
+
+        .about-image {
+            text-align: center;
+        }
+
+        .worker-image {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .contact-item {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-item h3 {
+            color: #fbbf24;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .contact-item p {
+            font-size: 1.1rem;
+        }
+
+        .whatsapp-btn {
+            background: #25d366;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            background: #20ba5a;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: #1e293b;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .footer-tagline {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fbbf24;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .service-card {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .service-card:nth-child(odd) {
+            animation-delay: 0.1s;
+        }
+
+        .service-card:nth-child(even) {
+            animation-delay: 0.2s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">🔧</div>
+                    KABAYAN PRIDE
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-subtitle">YOUR TRUSTED FILIPINO TECHNICAL PARTNER IN THE UAE</div>
+                <h1>KABAYAN <span style="color: #fbbf24;">PRIDE</span></h1>
+                <p>TECHNICAL SERVICES</p>
+                <p>Professional technical services delivered with Filipino excellence and reliability</p>
+                <div class="tagline">PROUDLY PINOY. EXPERTLY DONE.</div>
+                <a href="#contact" class="cta-button">Call Us Today!</a>
+                <a href="https://wa.me/971568239265" class="cta-button" style="background: #25d366;">WhatsApp Us</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🏊</div>
+                    <h3>Swimming Pools Maintenance</h3>
+                    <p>Comprehensive cleaning, water treatment, and routine inspection services to ensure your swimming pool remains clean, safe, and operational year-round.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Electromechanical Equipment Installation & Maintenance</h3>
+                    <p>Expert installation and preventive maintenance for electromechanical systems, kitchen equipment, bakery equipment, pizza equipment, and bar & beverage equipment.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Painting Contracting</h3>
+                    <p>High-quality interior and exterior painting services tailored to meet residential and commercial project standards, with precision and long-lasting finishes.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📋</div>
+                    <h3>Wallpaper Fixing Works</h3>
+                    <p>Professional wallpaper installation to enhance your space with a clean, seamless look—executed with attention to detail and durability.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🏗️</div>
+                    <h3>Floor & Wall Tiling & Partitions Installation</h3>
+                    <p>Specialized in the precise installation of tiles and space-enhancing partitions, ideal for both functional separation and aesthetic enhancement.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">❄️</div>
+                    <h3>Air-Condition, Ventilations & Air Filtration Systems</h3>
+                    <p>Complete HVAC solutions including installation, servicing, and maintenance of air-conditioning, ventilation, and filtration systems for optimal indoor climate control.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🧹</div>
+                    <h3>Building Cleaning Services</h3>
+                    <p>Reliable cleaning solutions for residential, commercial, and industrial properties—maintaining hygiene, appearance, and comfort.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🔨</div>
+                    <h3>Plaster Works</h3>
+                    <p>Smooth and durable plaster finishes for interior and exterior walls, prepared to the highest standards for paint, wallpaper, or decorative coatings.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🪵</div>
+                    <h3>Carpentry & Wood Flooring Works</h3>
+                    <p>Custom carpentry and precision wood flooring installation that combine craftsmanship, durability, and aesthetic appeal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Kabayan Pride</h2>
+                    <p>As your trusted Filipino technical partner in the UAE, Kabayan Pride Technical Services brings together the renowned Filipino work ethic with professional expertise across multiple technical disciplines.</p>
+                    <p>We serve all Emirates with a commitment to excellence, delivering reliable and high-quality technical services that meet international standards while maintaining the personal touch and dedication that Filipino professionals are known for worldwide.</p>
+                    <p>Our team of skilled technicians and craftsmen are dedicated to providing solutions that not only meet but exceed your expectations, ensuring every project is completed with pride and precision.</p>
+                </div>
+                <div class="about-image">
+                    <div class="worker-image" style="background: linear-gradient(45deg, #3b82f6, #1e3a8a); height: 300px; border-radius: 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">👷‍♂️</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us Today!</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 30px;">Ready to experience Filipino excellence in technical services?</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>📧 Email Us</h3>
+                    <p>info@kabayanpride.com</p>
+                </div>
+                
+                <div class="contact-item">
+                    <h3>📱 Call/WhatsApp</h3>
+                    <p>+971 56 8239 265</p>
+                    <a href="https://wa.me/971568239265" class="whatsapp-btn">Chat on WhatsApp</a>
+                </div>
+                
+                <div class="contact-item">
+                    <h3>📍 Location</h3>
+                    <p>Arab Bank Building<br>Port Saeed, Plot No. 180-4<br>Serving All Emirates</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-tagline">PROUDLY PINOY. EXPERTLY DONE.</div>
+            <p>&copy; 2025 Kabayan Pride Technical Services. All rights reserved.</p>
+            <p>Your Trusted Filipino Technical Partner in the UAE</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(30, 58, 138, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, #1e3a8a, #3b82f6)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+
+        // Animate service cards on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease-out';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
