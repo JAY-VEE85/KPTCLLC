@@ -9,8 +9,9 @@
     <meta name="theme-color" content="#1e40af">
     <meta name="description" content="Professional technical services with Filipino excellence in Dubai, UAE">
     <link rel="manifest" href="manifest.json">
-    <link rel="icon" type="image/png" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%231e40af'/%3E%3Ctext x='50' y='60' text-anchor='middle' fill='white' font-size='40' font-weight='bold'%3EK%3C/text%3E%3C/svg%3E">
-    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%231e40af'/%3E%3Ctext x='50' y='60' text-anchor='middle' fill='white' font-size='40' font-weight='bold'%3EK%3C/text%3E%3C/svg%3E">
+    <link rel="icon" type="image/png" href="./images/KPTECH.png">
+    <link rel="apple-touch-icon" href="./images/KPTECH.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
@@ -97,8 +98,8 @@
             width: 50px;
             height: 50px;
             margin-right: 15px;
-            border-radius: var(--border-radius-small);
-            background: var(--accent);
+            /* border-radius: var(--border-radius-small); */
+            /* background: var(--accent); */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -109,7 +110,7 @@
 
         .logo:hover .logo-img {
             transform: rotate(10deg);
-            background: var(--accent-dark);
+            /* background: var(--accent-dark); */
         }
 
         .nav-menu {
@@ -518,12 +519,12 @@
             to { transform: rotate(360deg); }
         }
 
-        .qr-content {
+        /* .qr-content {
             position: relative;
             z-index: 1;
-        }
+        } */
 
-        .qr-code {
+        /* .qr-code {
             width: 180px;
             height: 180px;
             background: var(--white);
@@ -542,7 +543,7 @@
         .qr-code:hover {
             transform: scale(1.05) rotate(5deg);
             box-shadow: var(--shadow-hover);
-        }
+        } */
 
        /* Enhanced Gallery */
         .gallery {
@@ -787,7 +788,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: var(--gradient-accent);
+            /* background: var(--gradient-accent); */
             transform: scale(0);
             transition: var(--transition);
             border-radius: 50%;
@@ -806,7 +807,379 @@
             position: relative;
             z-index: 1;
         }
+        /* Enhanced CEO Section - Horizontal Layout */
+        .ceo-section {
+            position: relative;
+            z-index: 1;
+            margin-top: 4rem;
+        }
 
+        .ceo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .ceo-card {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 3rem;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 3rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(30, 64, 175, 0.1);
+            align-items: center;
+        }
+
+        .ceo-card:hover {
+            box-shadow: var(--shadow-hover);
+            border-color: var(--primary-light);
+        }
+
+        .ceo-left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .ceo-image-wrapper {
+            position: relative;
+            width: 280px;
+            height: 360px;
+        }
+
+        .ceo-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50% / 60%;
+            border: 5px solid var(--primary-light);
+            box-shadow: 0 10px 30px rgba(30, 64, 175, 0.2);
+            transition: var(--transition);
+        }
+
+        .ceo-card:hover .ceo-image {
+            border-color: var(--accent);
+            transform: scale(1.02);
+        }
+
+        .ceo-badge {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            box-shadow: var(--shadow);
+            border: 4px solid var(--white);
+            transition: var(--transition);
+        }
+
+        .ceo-card:hover .ceo-badge {
+            transform: scale(1.1) rotate(10deg);
+        }
+
+        .ceo-right {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .ceo-header {
+            text-align: center;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, var(--bg-light), #f3f4f6);
+            border-radius: 12px;
+            width: 100%;
+        }
+
+        .ceo-name {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .ceo-title {
+            font-size: 1.1rem;
+            color: var(--accent-dark);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0;
+        }
+
+        .ceo-title i {
+            color: var(--accent);
+        }
+
+        .ceo-bio {
+            background: linear-gradient(135deg, var(--bg-light), #f3f4f6);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-light);
+            transition: var(--transition);
+            width: 100%;
+        }
+
+        .ceo-card:hover .ceo-bio {
+            border-left-color: var(--accent);
+        }
+
+        .ceo-bio p {
+            line-height: 1.8;
+            color: var(--text);
+            margin: 0;
+            font-size: 1.05rem;
+        }
+
+        .ceo-responsibilities {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 2px solid var(--bg-light);
+            width: 100%;
+        }
+
+        .ceo-responsibilities h4 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+        }
+
+        .ceo-responsibilities h4 i {
+            color: var(--accent);
+        }
+
+        .ceo-responsibilities ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+        }
+
+        .ceo-responsibilities li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            line-height: 1.5;
+            transition: var(--transition-fast);
+            padding: 0.5rem;
+            border-radius: 8px;
+        }
+
+        .ceo-responsibilities li:hover {
+            background: var(--bg-light);
+            transform: translateX(5px);
+            color: var(--primary);
+        }
+
+        .ceo-responsibilities li i {
+            color: var(--primary-light);
+            margin-top: 2px;
+            flex-shrink: 0;
+            font-size: 0.9rem;
+        }
+
+        .ceo-contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .ceo-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: var(--gradient-primary);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .ceo-link:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+            background: var(--gradient-accent);
+        }
+
+        @media (max-width: 968px) {
+            .ceo-card {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 2rem;
+            }
+            
+            .ceo-image-wrapper {
+                width: 240px;
+                height: 300px;
+            }
+            
+            .ceo-responsibilities ul {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .ceo-image-wrapper {
+                width: 200px;
+                height: 260px;
+            }
+            
+            .ceo-name {
+                font-size: 1.8rem;
+            }
+            
+            .ceo-card {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Why Choose Us Section */
+        .why-choose-us {
+            /* background: linear-gradient(135deg, #f9fafb, #ffffff); */
+            position: relative;
+        }
+
+        .why-choose-us::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="1.5" fill="rgba(30,64,175,0.03)"/><circle cx="80" cy="80" r="1.5" fill="rgba(251,191,36,0.03)"/></svg>');
+            animation: float 30s infinite linear reverse;
+        }
+
+        .why-choose-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .why-item {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-left: 5px solid var(--primary-light);
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(30, 64, 175, 0.03), transparent);
+            transition: var(--transition);
+        }
+
+        .why-item:hover::before {
+            left: 100%;
+        }
+
+        .why-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-left-color: var(--accent);
+        }
+
+        .why-icon {
+            width: 70px;
+            height: 70px;
+            min-width: 70px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.8rem;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(30, 64, 175, 0.2);
+        }
+
+        .why-item:hover .why-icon {
+            transform: scale(1.1) rotate(10deg);
+            background: var(--gradient-accent);
+        }
+
+        .why-content h3 {
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            transition: var(--transition);
+        }
+
+        .why-item:hover .why-content h3 {
+            color: var(--accent-dark);
+        }
+
+        .why-content p {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .why-choose-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .why-item {
+                padding: 2rem;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .why-icon {
+                width: 60px;
+                height: 60px;
+                min-width: 60px;
+                font-size: 1.5rem;
+            }
+        }
         /* Animations */
         @keyframes slideInUp {
             from {
@@ -1052,15 +1425,14 @@
     </div>
 
     <!-- Install PWA Button -->
-    <button id="installBtn" class="install-btn">📱 Install App</button>
+    <button id="installBtn" class="install-btn"><i class="fas fa-mobile-alt"></i> Install App</button>
 
     <header class="header" id="header">
         <nav class="nav">
             <div class="logo" onclick="scrollToSection('home')">
-                <div class="logo-img">K</div>
-                KAPTECH
+                <img src="./images/Kabayan-pride.png" alt="KAPTECH Logo" class="logo-img" style="width:50px; height:50px; border-radius:8px; margin-right:15px;">
             </div>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" onclick="scrollToSection('home')">Home</a></li>
                 <li><a href="#about" onclick="scrollToSection('about')">About</a></li>
@@ -1076,7 +1448,7 @@
             <h1>KAPTECH</h1>
             <div class="hero-tagline">Proudly Pinoy. Expertly Done.</div>
             <p>Professional technical services with Filipino excellence and expertise. From comprehensive maintenance to technical solutions in Dubai, UAE.</p>
-            <a href="mailto:kabayanprideservices@gmail.com" class="cta">Get a Quote ➤</a>
+            <a href="mailto:kabayanprideservices@gmail.com" class="cta">Get a Quote <i class="fas fa-arrow-right"></i></a>
         </div>
     </section>
 
@@ -1092,28 +1464,32 @@
             </div>
             <div class="highlights animate-slide-right">
                 <div class="highlight">
-                    <div class="highlight-icon">🏢</div>
+                    <!-- <div class="highlight-icon">🏢</div> -->
+                     <div class="highlight-icon"><i class="fas fa-building"></i></div>
                     <div>
                         <strong>Prime Location</strong><br>
                         Arab Bank Bldg, Port Saeed, Dubai
                     </div>
                 </div>
                 <div class="highlight">
-                    <div class="highlight-icon">⚙️</div>
+                    <!-- <div class="highlight-icon">⚙️</div> -->
+                     <div class="highlight-icon"><i class="fas fa-cog"></i></div>
                     <div>
                         <strong>Specialized Services</strong><br>
                         Comprehensive Technical Solutions
                     </div>
                 </div>
                 <div class="highlight">
-                    <div class="highlight-icon">🇵🇭</div>
+                    <!-- <div class="highlight-icon">🇵🇭</div> -->
+                     <div class="highlight-icon"><i class="fas fa-flag"></i></div>
                     <div>
                         <strong>Filipino Excellence</strong><br>
                         Proudly Pinoy, Expertly Done
                     </div>
                 </div>
                 <div class="highlight">
-                    <div class="highlight-icon">🏆</div>
+                    <!-- <div class="highlight-icon">🏆</div> -->
+                     <div class="highlight-icon"><i class="fas fa-trophy"></i></div>
                     <div>
                         <strong>Quality Assurance</strong><br>
                         Licensed & Professional
@@ -1121,137 +1497,280 @@
                 </div>
             </div>
         </div>
+        <div class="ceo-section" style="margin-top: 4rem;">
+            <h3 class="section-title" style="font-size: 2rem; margin-bottom: 3rem;">Meet Our Founder/CEO</h3>
+            <div class="ceo-container">
+                <div class="ceo-card">
+                    <div class="ceo-left">
+                        <div class="ceo-image-wrapper">
+                            <img src="./images/Louie.png" alt="CEO Louie Ubaldo" class="ceo-image">
+                            <div class="ceo-badge">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                        </div>
+                        <div class="ceo-header">
+                            <h3 class="ceo-name">Louie Ubaldo</h3>
+                            <p class="ceo-title"><i class="fas fa-crown"></i> Founder & Managing Director</p>
+                        </div>
+                    </div>
+                    
+                    <div class="ceo-right">
+                        <div class="ceo-bio">
+                            <p>With years of experience in technical services and a vision to bring Filipino excellence to the UAE market, Louie founded KAPTECH to deliver world-class solutions with integrity and professionalism.</p>
+                        </div>
+
+                        <div class="ceo-responsibilities">
+                            <h4><i class="fas fa-clipboard-check"></i> Key Responsibilities</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Strategic direction and company vision</li>
+                                <li><i class="fas fa-check-circle"></i> Business development and partnerships</li>
+                                <li><i class="fas fa-check-circle"></i> Client relationship management</li>
+                                <li><i class="fas fa-check-circle"></i> UAE regulatory compliance</li>
+                                <li><i class="fas fa-check-circle"></i> Innovation in service delivery</li>
+                            </ul>
+                        </div>
+
+                        <!-- <div class="ceo-contact-links">
+                            <a href="mailto:kabayanprideservices@gmail.com" class="ceo-link">
+                                <i class="fas fa-envelope"></i> Contact
+                            </a>
+                            <a href="https://wa.me/971568239265" class="ceo-link">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="vision-mission">
+            <h2 class="section-title animate-on-scroll">Our Vision & Mission</h2>
+            <div class="services-grid">
+                <!-- Vision Card -->
+                <div class="service animate-scale">
+                    <!-- <div class="service-icon">👁️</div> -->
+                     <div class="service-icon"><i class="fas fa-eye"></i></div>
+                    <h3>Vision</h3>
+                    <p>
+                        Our vision is to become the most trusted partner in the UAE’s technical services sector, 
+                        recognized for our unwavering commitment to excellence, innovation, and reliability. 
+                        We aspire to set the benchmark for technical solutions by delivering world-class services 
+                        that improve comfort, enhance efficiency, and create lasting value for residential, 
+                        commercial, and industrial clients across the region.
+                    </p>
+                </div>
+
+                <!-- Mission Card -->
+                <div class="service animate-scale">
+                    <!-- <div class="service-icon">🎯</div> -->
+                     <div class="service-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>Mission</h3>
+                    <p>
+                        Our mission is to deliver comprehensive, end-to-end technical services that focus on 
+                        quality, affordability, and customer satisfaction. We are dedicated to combining 
+                        Filipino work ethic and expertise with advanced industry practices, ensuring every 
+                        project is handled with professionalism, care, and attention to detail. Through 
+                        continuous improvement, sustainable practices, and customer-focused solutions, 
+                        we aim to exceed expectations and build long-term partnerships within the UAE.
+                    </p>
+                </div>
+            </div>
+        </section>
+
     </section>
 
     <section id="services">
         <h2 class="section-title animate-on-scroll">Our Services</h2>
         <div class="services-grid">
             <div class="service animate-scale">
-                <div class="service-icon">🏊</div>
+                <!-- <div class="service-icon">🏊</div> -->
+                 <div class="service-icon"><i class="fas fa-swimming-pool"></i></div>
                 <h3>Swimming Pool Maintenance</h3>
                 <p>Comprehensive cleaning, water treatment, and routine inspection services to ensure your swimming pool remains clean, safe, and operational year-round with professional expertise.</p>
             </div>
             <div class="service animate-scale">
-                <div class="service-icon">🎨</div>
+                <!-- <div class="service-icon">🎨</div> -->
+                 <div class="service-icon"><i class="fas fa-paint-roller"></i></div>
                 <h3>Painting Contracting</h3>
                 <p>High-quality interior and exterior painting services tailored to meet residential and commercial project standards using premium materials and techniques.</p>
             </div>
             <div class="service animate-scale">
-                <div class="service-icon">🔧</div>
+                <!-- <div class="service-icon">🔧</div> -->
+                 <div class="service-icon"><i class="fas fa-wrench"></i></div>
                 <h3>Electromechanical Services</h3>
                 <p>Expert installation and preventive maintenance for kitchen, cooking, bakery, pizza, dishwasher, and beverage equipment with certified technicians.</p>
             </div>
             <div class="service animate-scale">
-                <div class="service-icon">🛠️</div>
+                <!-- <div class="service-icon">🛠️</div> -->
+                 <div class="service-icon"><i class="fas fa-tools"></i></div>
                 <h3>Floor & Tiling Installation</h3>
                 <p>Specialized in precise installation of tiles and space-enhancing partitions for both functional and aesthetic enhancement of your property.</p>
             </div>
             <div class="service animate-scale">
-                <div class="service-icon">❄️</div>
+                <!-- <div class="service-icon">❄️</div> -->
+                 <div class="service-icon"><i class="fas fa-snowflake"></i></div>
                 <h3>HVAC & Air Filtration</h3>
                 <p>Complete HVAC solutions including installation, servicing, and maintenance of air-conditioning and ventilation systems for optimal comfort.</p>
             </div>
             <div class="service animate-scale">
-                <div class="service-icon">🗂️</div>
+                <!-- <div class="service-icon">🗂️</div> -->
+                 <div class="service-icon"><i class="fas fa-hammer"></i></div>
                 <h3>Carpentry & Wood Flooring</h3>
                 <p>Custom carpentry and precision wood flooring installation that combines traditional craftsmanship with modern durability standards.</p>
             </div>
             <div class="service animate-scale">
-                <div class="service-icon">🧹</div>
+                <!-- <div class="service-icon">🧹</div> -->
+                 <div class="service-icon"><i class="fas fa-broom"></i></div>
                 <h3>Building Cleaning Services</h3>
                 <p>Reliable cleaning solutions for residential, commercial, and industrial properties maintaining the highest hygiene and comfort standards.</p>
             </div>
             <div class="service animate-scale">
-                <div class="service-icon">🖼️</div>
+                <!-- <div class="service-icon">🖼️</div> -->
+                 <div class="service-icon"><i class="fas fa-image"></i></div>
                 <h3>Wallpaper & Plaster Works</h3>
                 <p>Professional wallpaper installation and smooth plaster finishes for interior and exterior walls with attention to detail and quality.</p>
             </div>
         </div>
     </section>
 
-    <section class="qr animate-on-scroll">
+    <!-- <section class="qr animate-on-scroll">
         <div class="qr-content">
             <h2>Scan Our Services</h2>
             <div class="qr-code">📱</div>
             <p>Scan the QR code above to access our complete service portfolio and get instant quotes for your technical service needs. Quick, easy, and professional.</p>
         </div>
-    </section>
+    </section> -->
 
     <section id="gallery" class="gallery">
         <h2 class="section-title animate-on-scroll">Our Work Gallery</h2>
         <div class="gallery-grid">
             <div class="gallery-item animate-scale">
-                <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=400&h=300&fit=crop&crop=center" alt="Swimming Pool Maintenance" loading="lazy">
+                <img src="./images/Cabinet.png" alt="Swimming Pool Maintenance" loading="lazy">
                 <div class="gallery-overlay">
-                    <h3>Pool Maintenance</h3>
+                    <h3>Cabinet fabrication and installation projects</h3>
                 </div>
             </div>
             <div class="gallery-item animate-scale">
-                <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=400&h=300&fit=crop&crop=center" alt="Painting Services" loading="lazy">
+                <img src="./images/ceiling.png" alt="Painting Services" loading="lazy">
                 <div class="gallery-overlay">
-                    <h3>Painting Works</h3>
+                    <h3>Cleaning, Maintenance & Repairs</h3>
                 </div>
             </div>
             <div class="gallery-item animate-scale">
-                <img src="https://images.unsplash.com/photo-1581092162384-8987c1d64718?w=400&h=300&fit=crop&crop=center" alt="Electromechanical Services" loading="lazy">
+                <img src="./images/maintenance.png" alt="Electromechanical Services" loading="lazy">
                 <div class="gallery-overlay">
-                    <h3>Electrical Work</h3>
+                    <h3>Complete Air Conditioning Solutions</h3>
                 </div>
             </div>
             <div class="gallery-item animate-scale">
-                <img src="https://images.unsplash.com/photo-1581092162384-8987c1d64718?w=400&h=300&fit=crop&crop=center" alt="Tiling Installation" loading="lazy">
+                <img src="./images/paths.png" alt="Tiling Installation" loading="lazy">
                 <div class="gallery-overlay">
-                    <h3>Tiling Services</h3>
+                    <h3>Outdoor spaces with artificial grass, tiled platforms, steppingstone pathways, and durable garden finishes</h3>
                 </div>
             </div>
             <div class="gallery-item animate-scale">
-                <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400&h=300&fit=crop&crop=center" alt="HVAC Services" loading="lazy">
+                <img src="./images/Tiles.png" alt="HVAC Services" loading="lazy">
                 <div class="gallery-overlay">
                     <h3>HVAC Systems</h3>
                 </div>
             </div>
             <div class="gallery-item animate-scale">
-                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center" alt="Construction Work" loading="lazy">
+                <img src="./images/bed.png" alt="Construction Work" loading="lazy">
                 <div class="gallery-overlay">
-                    <h3>Construction</h3>
+                    <h3>We specialize in custom-made joinery solutions, combining high-quality materials with precise craftsmanship to ensure durability, functionality, and aesthetic appeal</h3>
                 </div>
             </div>
             <div class="gallery-item animate-scale">
-                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=300&fit=crop&crop=center" alt="Carpentry Services" loading="lazy">
+                <img src="./images/Before and after.png" alt="Carpentry Services" loading="lazy">
                 <div class="gallery-overlay">
-                    <h3>Carpentry Work</h3>
+                    <h3>Air conditioning Cleaning and Maintenance</h3>
                 </div>
             </div>
-            <div class="gallery-item animate-scale">
+            <!-- <div class="gallery-item animate-scale">
                 <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center" alt="Building Services" loading="lazy">
                 <div class="gallery-overlay">
                     <h3>Building Services</h3>
                 </div>
-            </div>
+            </div> -->
         </div>
+        <section id="why-choose-us" class="why-choose-us">
+            <h2 class="section-title animate-on-scroll">Why Choose Us?</h2>
+            <div class="why-choose-grid">
+                <div class="why-item animate-slide-left">
+                    <div class="why-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="why-content">
+                        <h3>Licensed and Trained Technicians</h3>
+                        <p>Our team consists of certified professionals with extensive training and expertise in their respective fields.</p>
+                    </div>
+                </div>
+                
+                <div class="why-item animate-slide-right">
+                    <div class="why-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="why-content">
+                        <h3>Fast Response and Reliable Service</h3>
+                        <p>We pride ourselves on quick response times and dependable service delivery for all your technical needs.</p>
+                    </div>
+                </div>
+                
+                <div class="why-item animate-slide-left">
+                    <div class="why-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <div class="why-content">
+                        <h3>Competitive Pricing</h3>
+                        <p>Quality service doesn't have to break the bank. We offer fair and transparent pricing for all our solutions.</p>
+                    </div>
+                </div>
+                
+                <div class="why-item animate-slide-right">
+                    <div class="why-icon">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <div class="why-content">
+                        <h3>Client Satisfaction Guarantee</h3>
+                        <p>Your satisfaction is our priority. We ensure every job meets our high standards and exceeds expectations.</p>
+                    </div>
+                </div>
+                
+                <div class="why-item animate-slide-left">
+                    <div class="why-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="why-content">
+                        <h3>UAE Safety Compliance</h3>
+                        <p>All our services strictly adhere to UAE safety regulations and industry standards for your peace of mind.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </section>
-
     <section id="contact">
         <h2 class="section-title animate-on-scroll">Contact Us</h2>
         <div class="contact-grid">
             <div class="contact-info animate-slide-left">
                 <h3>Get In Touch</h3>
                 <div class="contact-item" onclick="window.open('tel:+971568239265')">
-                    <div class="contact-icon">📱</div>
+                    <!-- <div class="contact-icon">📱</div> -->
+                     <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
                     <div>
                         <strong>Phone</strong><br>
                         <a href="tel:+971568239265">+971 56 8239 265</a>
                     </div>
                 </div>
                 <div class="contact-item" onclick="window.open('mailto:kabayanprideservices@gmail.com')">
-                    <div class="contact-icon">✉️</div>
+                    <!-- <div class="contact-icon">✉️</div> -->
+                     <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                     <div>
                         <strong>Email</strong><br>
                         <a href="mailto:kabayanprideservices@gmail.com">kabayanprideservices@gmail.com</a>
                     </div>
                 </div>
                 <div class="contact-item" onclick="window.open('https://maps.google.com/?q=Arab+Bank+Bldg+Port+Saeed+Dubai+UAE')">
-                    <div class="contact-icon">📍</div>
+                    <!-- <div class="contact-icon">📍</div> -->
+                     <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                     <div>
                         <strong>Address</strong><br>
                         Arab Bank Bldg, Port Saeed<br>
@@ -1259,7 +1778,8 @@
                     </div>
                 </div>
                 <div class="contact-item" onclick="window.open('https://wa.me/971568239265')">
-                    <div class="contact-icon">💬</div>
+                    <!-- <div class="contact-icon">💬</div> -->
+                     <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
                     <div>
                         <strong>WhatsApp</strong><br>
                         <a href="https://wa.me/971568239265">+971 56 8239 265</a>
@@ -1278,10 +1798,10 @@
             <p>Kabayan Pride Technical Services LLC S.O.C.<br>Proudly Pinoy. Expertly Done.</p>
             
             <div class="social">
-                <a href="#" aria-label="Facebook"><span>📘</span></a>
-                <a href="#" aria-label="LinkedIn"><span>💼</span></a>
-                <a href="https://wa.me/971568239265" aria-label="WhatsApp"><span>💬</span></a>
-                <a href="mailto:kabayanprideservices@gmail.com" aria-label="Email"><span>✉️</span></a>
+                <a href="https://www.facebook.com/profile.php?id=61579410208190" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://wa.me/971568239265" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:kabayanprideservices@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
             
             <p>&copy; 2025 KAPTECH. All rights reserved. | Dubai, UAE</p>
